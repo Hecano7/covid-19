@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <met ddrhss="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Found</title>
+</head>
+<body>
+    <form class="container" id="form" name="form">
+        <h3>Found</h3>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Category:</label>
+            <div class="col-sm-10">
+            <input type="text" class="form-control" name="category" id="category">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Address:</label>
+            <div class="col-sm-10">
+            <input type="text" class="form-control" name="address" id="address">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Price:</label>
+            <div class="col-sm-10">
+            <input name='price' type="text" class="form-control" id='price'>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Quantity:</label>
+            <div class="col-sm-10">
+            <input name='quantity' type="text" class="form-control" id='quantity'>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Purchase date:</label>
+            <div class="col-sm-10">
+            <input name='purchasedate' type="text" class="form-control" id='purchasedate'>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Last update:</label>
+            <div class="col-sm-10">
+            <input name='lastupdate' type="text" class="form-control" id='lastupdate'>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2" onclick="submitForm()">Submit</button>
+    </form>
+    <script src="../scripts.js"></script>
+</body>
+</html>
+
+
