@@ -1,7 +1,8 @@
 const express = require('express');
 const fs = require('fs');
 const app = express();
-app.listen(3000, () => console.log('listening at 3000'));
+var PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log('listening at 3000'));
 app.use(express.static('Public'));
 app.use(express.json({ limit: '1mb'}));
 
