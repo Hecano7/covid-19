@@ -76,7 +76,7 @@ function createRow(obj) {
   cell.innerHTML = obj.Dist.toFixed(2) + " mi";
   cell1.innerHTML = obj.Name;
   cell2.innerHTML = obj.Location.capStoreName;
-  cell2.setAttribute("href" , obj.Location.coordinates);
+  cell2.setAttribute("href" , obj.Location.address);
   if(obj.Price ){
       cell3.innerHTML = "$"+obj.Price;
 }
