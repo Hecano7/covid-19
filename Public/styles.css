@@ -124,9 +124,18 @@ img.mini{
 }
 
 @media (max-width:830px){
+  html
+{
+  height: 100%;
+  width: 400px;
+}
   body
 {
-  overflow-x:hidden;
+  height: 100%;
+  width: 400px;
+}
+h3{
+  margin-left: 3em;
 }
 .table th
 {
