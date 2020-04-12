@@ -80,7 +80,7 @@ function createRow(obj) {
   if(obj.Price ){
       cell3.innerHTML = "$"+obj.Price;
 }
-  cell5.innerHTML = obj.Last_Updated.slice(1,16);
+  cell5.innerHTML = obj.Last_Updated.slice(4,16);
   cell4.innerHTML = obj.Quantity;
   cell2.addEventListener("click", () => {
     window.location.replace(obj.Location.address)
