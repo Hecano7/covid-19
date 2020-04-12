@@ -124,6 +124,20 @@ img.mini{
 }
 
 @media (max-width:830px){
+  body
+{
+  overflow-x:hidden;
+}
+.table th
+{
+  padding: 0.15rem;
+}
+  .col-sm-2{
+    width: 0%;
+  }
+  .for-group{
+    margin-bottom: unset;
+  }
   .float-left{
     display: block;
   }
