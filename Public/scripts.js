@@ -83,7 +83,7 @@ function createRow(obj) {
   cell5.innerHTML = obj.Last_Updated.slice(1,16);
   cell4.innerHTML = obj.Quantity;
   cell2.addEventListener("click", () => {
-    window.location.replace(obj.Location.coordinates)
+    window.location.replace(obj.Location.address)
   })
 }
 
