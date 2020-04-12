@@ -68,12 +68,13 @@ function createRow(obj) {
   var cell4 = row.insertCell(4);
   var cell5 = row.insertCell(5);
   var cell6 = row.insertCell(6);
+  var dist = obj.Dist.toFixed(2).style.color = "lightblue";
   var img = document.createElement('img');
   if(obj.Photo){
     img.src = obj.Photo;
     cell6.appendChild(img).setAttribute("class" , "mini");
 };
-  cell.innerHTML = obj.Dist.toFixed(2) + " mi";
+  cell.innerHTML = dist + " mi";
   cell1.innerHTML = obj.Name;
   cell2.innerHTML = obj.Location.capStoreName;
   cell2.setAttribute("href" , obj.Location.coordinates);
