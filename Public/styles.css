@@ -1,0 +1,136 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  text-align: center;
+}
+
+td[href] {
+  cursor: pointer;
+  color: blue;
+}
+
+td[href]:hover {
+  color: rgb(0, 179, 255);
+}
+
+h3{
+  margin: 1em 0em 1em 0em;
+}
+
+.images{
+  margin: 2em 0em;
+}
+
+.first {
+  margin: 2em 0em;
+}
+
+.second {
+  margin: 2em 0em;
+}
+
+.btn-secondary{
+  margin: 1.5em 0em 1.5em 0em;
+}
+
+.prompt {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 10em; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  text-align: center;
+  margin: auto;
+  padding: 30px;
+  padding-top: 1em;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+.close1 {
+  text-align: right;
+  margin-left: auto;
+  width: 1em;
+  height: 1em;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.button{
+    margin: auto;
+    margin-top: 1.5em;
+    border-radius: .25rem;
+    min-width: 6em;
+    height: 2.5em;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+#listings{
+  display: none;
+}
+
+.button:hover{
+    background-color: #007bffcf;
+    border-color: #007bffcf;  
+}
+
+.image-preview{
+  text-align: left;
+  width: 250px;
+  min-height: 170px;
+  border: 2px solid #dddddd;
+  margin: 1em auto 1em 2em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #cccccc;
+}
+.image-preview__image {
+  display: none;
+  width: 100%;
+}
+#inpFile{
+  max-width: 14em;
+}
+
+.float-left{
+  display:flex;
+  width: 100%;
+
+}
+
+img.mini{
+ max-height: 2em;
+ max-width: 2em;
+}
+
+#home.button{
+  margin-right: 100%;
+}
+
+@media (max-width:830px){
+  .float-left{
+    display: block;
+  }
+  #inpFile{
+    background-color: #cccccc
+  }
+  .table{
+    max-width: 100%;
+  }
+}

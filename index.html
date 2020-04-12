@@ -5,27 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="/img/ToiletPaper.jpg" id="favicon">
     <title>Resource Finder</title>
 </head>
 <body>  
-  <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Resource Finder</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Please select if you are seeking or finding</h6>
+  <div>
+      <div >
+        <h4 class="first">COVID-19 Resource Finder</h4>
+        <h6 class="second">Please select if you are seeking or if you located some supplies.<br/>
+        Then continue by selecting the item.</h6>
+        <hr>
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-secondary active">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked> Seeking
+                <input type="radio" name="options" id="option1" autocomplete="off" value='seeking'> Seeking
             </label>
             <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option2" autocomplete="off"> Found
+                <input type="radio" name="options" id="option2" autocomplete="off" value='found'> Found
             </label>
           </div> 
-        <div class="card-body">
-          <img href="#" src="./img/cleaningSupplies.jpg" width="80" height="80" alt='Cleaning Supplies'/>
-        </div>
-        <div class="card-body">
-          <img href="#" src="./img/ToiletPaper.jpg" width="80" height="80" alt='Toilet Paper'/>
-        </div>
+        <br/>
+          <img class="images" src="/img/cleaningSupplies.jpg" width="200" height="200" alt='Cleaning Supplies' onclick='radioButton(`Cleaning Supplies`)'/>
+        <br/>
+        
+          <img class="images" src="/img/ToiletPaper.jpg" width="200" height="200" alt='Toilet Paper' onclick='radioButton(`Toilet Paper`)'/>
+        
       </div>
       </div>
     
