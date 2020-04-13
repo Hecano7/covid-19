@@ -137,15 +137,14 @@ img.mini{
     height: 100%;
   }
   h3{
-  margin-left: 2em;
-}
+  margin-left: 3em;
+  }
   h4{
   margin-top: 1em;
-}
-.table th
-{
-  padding: 0.15rem;
-}
+  }
+  .table th{
+    padding: 0.15rem;
+  }
   .col-sm-2{
     width: 0%;
   }
