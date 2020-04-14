@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  if (window.document.location == `http://localhost:3000/seeking.html`) {
+  if (window.document.location == `https://covid-19-resource-finder.herokuapp.com/seeking.html`) {
       let settings = { method: "Get" };
       getPosition()
       .then((position) => {showPosition(position)
