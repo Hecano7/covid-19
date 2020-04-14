@@ -2,10 +2,6 @@ let coordinates;
 let photo;
 
 document.addEventListener("DOMContentLoaded", function () {
-  // const favicon = document.getElementById("favicon");
-  // function toRed(){
-
-  // }
 
   if (window.document.location == `https://covid-19-resource-finder.herokuapp.com/found.html`) {
     document.getElementById("category").value = localStorage.getItem("item");
@@ -20,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  if (window.document.location == `https://covid-19-resource-finder.herokuapp.com/seeking.html`) {
+  if (window.document.location == `http://localhost:3000/seeking.html`) {
       let settings = { method: "Get" };
       getPosition()
       .then((position) => {showPosition(position)
@@ -84,6 +80,15 @@ function createRow(obj) {
   cell4.innerHTML = obj.Quantity;
   cell2.addEventListener("click", () => {
     window.location.replace(obj.Location.address)
+  });
+  cell6.addEventListener("click", () => {
+    console.log("clicked");
+    var imgPop = document.getElementById("imgPop");
+      imgPop.style.display = "block";
+      imgPop.src = obj.Photo;
+      imgPop.addEventListener("click", () => {
+      imgPop.style.display = "none";
+    })
   })
 }
 
