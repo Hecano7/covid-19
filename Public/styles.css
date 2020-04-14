@@ -150,10 +150,12 @@ img.mini{
   html
   {
     height: 100%;
+    min-height: 40em;
   }
   body
   {
     height: 100%;
+    min-height: 40em;
   }
   .container{
     height: 100%;
