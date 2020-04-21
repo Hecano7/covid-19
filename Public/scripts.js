@@ -28,7 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
         return o;
       }))
       .then(data => data.sort(function(a, b){return a.Dist-b.Dist}))
-      .then(data => data.map(obj => createRow(obj)))
+      .then(objects.filter(obj => obj.Name == localStorage.getItem("item")))
+      .then(data => data.map(obj => console.log(obj)))
       // .then(data => data.map(obj => console.log(obj)))
       )
     })
@@ -155,7 +156,7 @@ function radioButton(pic) {
   const radio = document.getElementsByName("options");
   for (let i = 0; i < radio.length; i++) {
     if (radio[i].checked == true)
-      window.document.location.replace(
+    window.document.location.replace(
         `https://covid-19-resource-finder.herokuapp.com/${radio[i].value}.html`
       );
     }
@@ -207,3 +208,4 @@ function uploadPhoto(){
     }
   })
 }
+

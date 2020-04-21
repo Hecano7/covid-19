@@ -35,3 +35,4 @@ app.get('/seeking.html', (request, response) => {
 app.get('/data', (request, response) => {
     response.sendFile('info.json', {root: __dirname });
 });
+
