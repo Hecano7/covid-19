@@ -99,6 +99,8 @@ let date = '';
 
 function submitForm() {
   event.preventDefault();
+  console.log(coordinates);
+
     let lat = coordinates[0];
     let lon = coordinates[1];
     let address = `https://www.google.com/maps?q=${lat},${lon}`;
@@ -125,7 +127,7 @@ function submitForm() {
     };
 
     const options = {
-      method: "post",
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
