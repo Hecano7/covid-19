@@ -156,7 +156,7 @@ function showPosition(position) {
 
 function radioButton(pic) {
   const radio = document.getElementsByName("options");
-  console.log(radio.values);
+  console.log(radio);
   // for (let i = 0; i < radio.length; i++) {
   //   if (radio[i].checked == true){
   //     console.log(radio[i]);
