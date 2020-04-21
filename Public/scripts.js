@@ -109,29 +109,31 @@ function submitForm() {
     let capStoreName = storeName.charAt(0).toUpperCase() + storeName.slice(1);
     let text1 = "Thank you for your contribution!<br/> Why dont you checkout listings near you by clicking on the link bellow.";
     let text2 = "Atleast the first two fields have to be filled out before submitting.";
-    console.log(photo);
-    if(category != "" && storeName != "")
-      {    
-        let info = {
-          Name: category.charAt(0).toUpperCase() + category.slice(1),
-          Location: {
-            address,
-            capStoreName,
-            lat,
-            lon
-          },
-          Price: price,
-          Last_Updated: JSON.stringify(date),
-          Quantity: quantity,
-          Photo: photo
-        };
-        const options = {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(info),
-        };
+
+    let info = {
+      Name: category.charAt(0).toUpperCase() + category.slice(1),
+      Location: {
+        address,
+        capStoreName,
+        lat,
+        lon
+      },
+      Price: price,
+      Last_Updated: JSON.stringify(date),
+      Quantity: quantity,
+      Photo: photo
+    };
+
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(info),
+    };
+
+    if(category != "" && storeName != ""){    
+        console.log(info);
         fetch("/api", options).then((response) => {
           console.log(response);
         });
