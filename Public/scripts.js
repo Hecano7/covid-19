@@ -156,13 +156,12 @@ function showPosition(position) {
 
 function radioButton(pic) {
   const radio = document.getElementsByName("options");
-  console.log(radio);
-  // for (let i = 0; i < radio.length; i++) {
-  //   if (radio[i].checked == true){
-  //     console.log(radio[i]);
-  //       window.document.location.replace(`https://covid-19-resource-finder.herokuapp.com/${radio[i]}.html`);
-  //     }
-  //   }
+  for (let i = 0; i < radio.length; i++) {
+    if (radio[i].checked == true){
+      console.log(radio[i]);
+        window.document.location.replace(`https://covid-19-resource-finder.herokuapp.com/${radio[i].value}.html`);
+      }
+    }
     localStorage.setItem("item", pic);
 }
 
