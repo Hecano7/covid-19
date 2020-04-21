@@ -2,8 +2,8 @@ let coordinates;
 let photo;
 
 document.addEventListener("DOMContentLoaded", function () {
-
-  if (window.document.location == `https://covid-19-resource-finder.herokuapp.com/found.html`) {
+  console.log(window.document.location.href);
+  if (window.document.location.href == `https://covid-19-resource-finder.herokuapp.com/found`) {
     document.getElementById("category").value = localStorage.getItem("item");
     uploadPhoto();
 
@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  if (window.document.location == `https://covid-19-resource-finder.herokuapp.com/seeking.html`) {
+  if (window.document.location.href == `https://covid-19-resource-finder.herokuapp.com/seeking`) {
+    console.log(localStorage.getItem("item"));
       let settings = { method: "Get" };
       getPosition()
       .then((position) => {showPosition(position)
@@ -28,9 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
         return o;
       }))
       .then(data => data.sort(function(a, b){return a.Dist-b.Dist}))
-      .then((objects) => {objects.filter(obj => obj.Name == localStorage.getItem("item"))})
-      .then(data => data.map(obj => console.log(obj)))
+      .then((objects) => objects.filter(obj => obj.Name == localStorage.getItem("item")))
+      .then(data => data.map(obj => createRow(obj)))
       // .then(data => data.map(obj => console.log(obj)))
+      
       )
     })
   }
@@ -155,10 +157,10 @@ function showPosition(position) {
 function radioButton(pic) {
   const radio = document.getElementsByName("options");
   for (let i = 0; i < radio.length; i++) {
-    if (radio[i].checked == true)
-    window.document.location.replace(
-        `https://covid-19-resource-finder.herokuapp.com/${radio[i].value}.html`
-      );
+    if (radio[i].checked == true){
+      console.log("clicked");
+        window.document.location =`https://covid-19-resource-finder.herokuapp.com/${radio[i]}.html`;
+      }
     }
     localStorage.setItem("item", pic);
 }
