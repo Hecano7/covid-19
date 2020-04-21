@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
         return o;
       }))
       .then(data => data.sort(function(a, b){return a.Dist-b.Dist}))
-      .then(objects.filter(obj => obj.Name == localStorage.getItem("item")))
-      .then(data => console.log(data))
+      .then((objects) => {objects.filter(obj => obj.Name == localStorage.getItem("item"))})
+      .then(data => data.map(obj => createRow(obj)))
       // .then(data => data.map(obj => console.log(obj)))
       )
     })
