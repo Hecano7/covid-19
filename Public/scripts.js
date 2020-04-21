@@ -159,7 +159,7 @@ function radioButton(pic) {
   for (let i = 0; i < radio.length; i++) {
     if (radio[i].checked == true){
       console.log(radio[i]);
-        window.document.location =`https://covid-19-resource-finder.herokuapp.com/${radio[i]}.html`;
+        window.document.location.replace(`https://covid-19-resource-finder.herokuapp.com/${radio[i]}.html`);
       }
     }
     localStorage.setItem("item", pic);
