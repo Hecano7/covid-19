@@ -125,7 +125,7 @@ function submitForm() {
     };
 
     const options = {
-      method: "POST",
+      method: "post",
       headers: {
         "Content-Type": "application/json",
       },
