@@ -3,7 +3,7 @@ let photo;
 
 document.addEventListener("DOMContentLoaded", function () {
   console.log(window.document.location.href);
-  if (window.document.location.href == `https://covid-19-resource-finder.herokuapp.com/found`) {
+  if (window.document.location.href == `https://covid-19-resource-finder.herokuapp.com/found.html`) {
     document.getElementById("category").value = localStorage.getItem("item");
     uploadPhoto();
 
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  if (window.document.location.href == `https://covid-19-resource-finder.herokuapp.com/seeking`) {
+  if (window.document.location.href == `https://covid-19-resource-finder.herokuapp.com/seeking.html`) {
     console.log(localStorage.getItem("item"));
       let settings = { method: "Get" };
       getPosition()
@@ -158,7 +158,7 @@ function radioButton(pic) {
   const radio = document.getElementsByName("options");
   for (let i = 0; i < radio.length; i++) {
     if (radio[i].checked == true){
-      console.log("clicked");
+      console.log(radio[i]);
         window.document.location =`https://covid-19-resource-finder.herokuapp.com/${radio[i]}.html`;
       }
     }
