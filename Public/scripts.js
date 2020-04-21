@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }))
       .then(data => data.sort(function(a, b){return a.Dist-b.Dist}))
       .then(objects.filter(obj => obj.Name == localStorage.getItem("item")))
-      .then(data => data.map(obj => console.log(obj)))
+      .then(data => console.log(data))
       // .then(data => data.map(obj => console.log(obj)))
       )
     })
