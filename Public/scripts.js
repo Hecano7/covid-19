@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return o;
       }))
       .then(data => data.sort(function(a, b){return a.Dist-b.Dist}))
-      .then((objects) => objects.filter(obj => obj.Name == localStorage.getItem("item")))
+      .then(function(objects) { if(localStorage.getItem("item") != "all"){objects.filter(obj => obj.Name == localStorage.getItem("item"))}})
       .then(data => data.map(obj => createRow(obj)))
       // .then(data => data.map(obj => console.log(obj)))
       
@@ -211,3 +211,7 @@ function uploadPhoto(){
   })
 }
 
+function redirectListings(){
+  window.location.href = 'https://covid-19-resource-finder.herokuapp.com/seeking.html';
+  localStorage.setItem("item", "all");
+}
