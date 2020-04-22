@@ -29,10 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
         return o;
       }))
       .then(data => data.sort(function(a, b){return a.Dist-b.Dist}))
-      .then((objects) => objects.filter(obj => obj.Name == localStorage.getItem("item")))
-      .then(data => data.map(obj => createRow(obj)))
-      // .then(data => data.map(obj => console.log(obj)))
-      
+      .then(function (objects){if (localStorage.getItem("item") != "all"){
+        var filtered = objects.filter(obj => obj.Name == localStorage.getItem("item"));
+        filtered.map(obj => createRow(obj));
+      }else{
+        objects.map(obj => createRow(obj))
+      }})
+
       )
     })
   }
