@@ -233,6 +233,7 @@ function listItems(){
   .then(data => data.map(function(obj) {
     console.log(obj);
     if(!list.includes(obj.Name)){
+      console.log("hello");
       list.push(obj.Name);
     }
   }));
