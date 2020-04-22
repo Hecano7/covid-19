@@ -234,7 +234,6 @@ function listItems(){
     if(!list.includes(obj.Name)){
       list.push(obj.Name);
     }
+    list.map(name => items.appendChild(name));
   }));
-
-  list.map(name => console.log(name));
 }
