@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var filtered = objects.filter(obj => obj.Name == localStorage.getItem("item"));
         filtered.map(obj => createRow(obj));
       }else{
+        console.log("all");
         objects.map(obj => createRow(obj))
       }})
 
@@ -220,5 +221,5 @@ function uploadPhoto(){
 
 function redirectListings(){
   window.location.href = 'https://covid-19-resource-finder.herokuapp.com/seeking.html';
-  localStorage.setItem("item", "");
+  localStorage.setItem("item", "all");
 }
