@@ -232,10 +232,10 @@ function listItems(){
   .then((response) => response.json())
   .then(data => data.map(function(obj) {
     if(!list.includes(obj.Name)){
-      console.log(obj.Name);
       list.push(obj.Name);
     }
   }));
+  console.log(list);
 
   list.map(name => items.appendChild(name));
 }
