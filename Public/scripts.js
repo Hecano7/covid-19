@@ -231,6 +231,7 @@ function listItems(){
   fetch(`/data`)
   .then((response) => response.json())
   .then(data => data.map(function(obj) {
+    console.log(obj);
     if(!list.includes(obj.Name)){
       list.push(obj.Name);
     }
