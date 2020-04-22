@@ -230,10 +230,12 @@ function listItems(){
 
   fetch(`/data`)
   .then((response) => response.json())
-  .then(data => data.map(function(obj) {
-    if(!list.includes(obj.Name)){
-      list.push(obj.Name);
-    }
-    list.map(name => items.appendChild(name));
-  }));
+  .then(function(obj) { 
+     for (let i = 0; i < obj.length; i++) {
+      if(!list.includes(obj.Name)){
+        list.push(obj.Name);
+      };
+      list.map(name => console.log(name));
+    }
+  })
 }
