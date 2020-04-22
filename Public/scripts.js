@@ -235,7 +235,6 @@ function listItems(){
       list.push(obj.Name);
     }
   }));
-  console.log(list);
 
-  list.map(name => items.appendChild(name));
+  list.map(name => console.log(name));
 }
