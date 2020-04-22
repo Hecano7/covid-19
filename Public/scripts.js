@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   if (window.document.location.href == `https://covid-19-resource-finder.herokuapp.com/seeking.html`) {
-    console.log(localStorage.getItem("item"));
+      listItems();
       let settings = { method: "Get" };
       getPosition()
       .then((position) => {showPosition(position)
@@ -220,6 +220,21 @@ function uploadPhoto(){
 }
 
 function redirectListings(){
-  window.location.href = 'https://covid-19-resource-finder.herokuapp.com/seeking.html';
   localStorage.setItem("item", "all");
+  window.location.href = 'https://covid-19-resource-finder.herokuapp.com/seeking.html';
+}
+
+function listItems(){
+  var list = [];
+  var items = document.getElementById("items");
+
+  fetch(`/data`)
+  .then((response) => response.json())
+  .then(data => data.map(function(obj) {
+    if(!list.includes(obj.Name)){
+      list.push(obj.Name);
+    }
+  }));
+
+  list.map(name => items.appendChild(name));
 }
